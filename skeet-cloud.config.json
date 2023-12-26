@@ -1,0 +1,57 @@
+{
+  "app": {
+    "name": "solana-validate-monitor",
+    "projectId": "solana-validator-409002",
+    "fbProjectId": "solana-validator-d4661",
+    "template": "Backend Only - Firestore",
+    "region": "asia-northeast1",
+    "appDomain": "app.your-app-url.com",
+    "nsDomain": "your-nameserver.com",
+    "lbDomain": "loadbalancer.your-app-url.com",
+    "hasLoadBalancer": false
+  },
+  "ai": {
+    "lang": "en",
+    "ais": [
+      {
+        "name": "VertexAI",
+        "availableModels": [
+          "chat-bison@001"
+        ]
+      }
+    ]
+  },
+  "cloudRun": {},
+  "db": {},
+  "taskQueues": [],
+  "cloudArmor": [
+    {
+      "securityPolicyName": "skeet-solana-validate-monitor-armor",
+      "rules": [
+        {
+          "priority": "10",
+          "description": "Allow Your Home IP addresses",
+          "options": {
+            "src-ip-ranges": "106.72.39.194",
+            "action": "allow"
+          }
+        },
+        {
+          "priority": "300",
+          "description": "Defense from NodeJS attack",
+          "options": {
+            "action": "deny-403",
+            "expression": "evaluatePreconfiguredExpr('nodejs-v33-stable')"
+          }
+        },
+        {
+          "priority": "2147483647",
+          "description": "Allow/Deny All IP addresses. default: allow",
+          "options": {
+            "action": "allow"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "solana-validator-d4661"
+  },
+  "targets": {
+    "solana-validator-d4661": {
+      "hosting": {
+        "solana-validator-d4661": [
+          "solana-validator-d4661"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
