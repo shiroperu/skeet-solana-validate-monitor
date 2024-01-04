@@ -11,4 +11,5 @@ export {
   // Skeet Doc: https://skeet.dev
   root,
   solvMonitor,
+  stakeMonitor,
 } from '@/routings'

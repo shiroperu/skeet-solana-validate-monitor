@@ -9,7 +9,7 @@ const vpcConnector = `${appName}-con`
 
 export const scheduleDefaultOption: ScheduleOptions = {
   region,
-  schedule: 'every 12 hours',
+  schedule: 'every 6 hours',
   timeZone: 'UTC',
   retryCount: 3,
   maxRetrySeconds: 60,
@@ -23,7 +23,7 @@ export const scheduleDefaultOption: ScheduleOptions = {
 
 export const schedulePrivateOption: ScheduleOptions = {
   region,
-  schedule: 'every 12 hours',
+  schedule: 'every 6 hours',
   timeZone: 'UTC',
   retryCount: 3,
   maxRetrySeconds: 60,

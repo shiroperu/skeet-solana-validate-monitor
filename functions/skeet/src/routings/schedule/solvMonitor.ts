@@ -14,7 +14,7 @@ export const solvMonitor = onSchedule(
   async (event) => {
     try {
       const endpoint = 'https://api.testnet.solana.com'
-      const voteAccountPubkey = '6GC9mQJXaSMwadb9RSsFSt9tEEjsEHqq3cMLzgBMibjK'
+      const voteAccountPubkey = 'GLCcq3vN9SgAj6iD5hL2eiKnU7oJm5zQAriiL7drg57S'
       const result: ValidatorStatusParams = await isValidatorActive(
         endpoint,
         voteAccountPubkey,
